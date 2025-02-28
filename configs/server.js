@@ -8,6 +8,7 @@ import authRoutes from "../src/auth/auth.routes.js"
 import companyRoutes from "../src/companies/companies.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { dbConnection } from "./mongo.js"
+import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }))
@@ -21,6 +22,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/interferManager/v1/auth", authRoutes)
     app.use("/interferManager/v1/companies", companyRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () => {

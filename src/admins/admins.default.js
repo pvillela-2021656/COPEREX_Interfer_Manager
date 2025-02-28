@@ -6,7 +6,7 @@ export const adminDefault = async () => {
 
         const existingAdmin = await Admin.findOne({ role: "ADMIN_ROLE" });
         if (existingAdmin) {
-            console.log("Admin has already been created");
+            //console.log("Admin has already been created");
             return;
         }
             await Admin.create({
@@ -17,9 +17,9 @@ export const adminDefault = async () => {
                 role: "ADMIN_ROLE"
             });
             
-        console.log("Default admin created");
+        //console.log("Default admin created");
 
     } catch (err) {
-        console.log("Error creating user");
+        //console.log("Error creating user");
     }
 };

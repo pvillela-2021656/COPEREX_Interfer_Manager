@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "67c1cc361d67fec81b4da7ea"
+  },
+  "name": "Walmart",
+  "description": "Es una corporación multinacional de tiendas de origen estadounidense, que opera cadenas de grandes almacenes de descuento y clubes de almacenes.",
+  "address": "Centro Comercial, 3 Avenida 41 10, Cdad. de Guatemala",
+  "email": "walmartgt@gmail.com",
+  "impactLevel": "HIGH_LEVEL",
+  "yearsOperating": 62,
+  "category": "Minorista comercial",
+  "webPage": "https://www.walmart.com.gt/?srsltid=AfmBOopQ2UETpvuX6b9aIQe3QiUt2oghiFLsLMzfdT8bWOd6YrKBDAlb",
+  "createdAt": {
+    "$date": "2025-02-28T14:46:14.931Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:46:14.931Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cd14e4498ac1f8940d72"
+  },
+  "name": "Gallo",
+  "description": "Cerveza Gallo es una marca de cerveza producida por la Cervecería Centro Americana, S.A.. Es la cerveza más consumida en Guatemala. La Cervecería Centro Americana tuvo hasta 2003 una cuota de mercado cercana al 100% del mercado cervecero guatemalteco.",
+  "address": "3a Avenida Norte Final, Interior Finca El Zapote Z. 2, 3A Av · 1801 237 8392",
+  "email": "gallo@gmail.com",
+  "impactLevel": "HIGH_LEVEL",
+  "yearsOperating": 99,
+  "category": "Cerveceria",
+  "webPage": "https://www.elgallomasgallo.com.gt/?srsltid=AfmBOorr0gjphXxHUzznCHEjZBU5IjWEDzXufsf2nVPRmNhKFg91qWOF",
+  "createdAt": {
+    "$date": "2025-02-28T14:49:56.619Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:49:56.619Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cdb4e4498ac1f8940d76"
+  },
+  "name": "DollarCity",
+  "description": "Encuentra todo lo que necesitas en Decoración, Hogar, Oficina, Mascotas y mucho más. ¡Conoce nuestras ubicaciones entrando ahora!",
+  "address": "Calzada Roosevelt 9-12 · 2210 6000",
+  "email": "dollarcity@gmail.com",
+  "impactLevel": "MEDIUM_LEVEL",
+  "yearsOperating": 32,
+  "category": "Comercial de productos",
+  "webPage": "https://dollarcity.com/",
+  "createdAt": {
+    "$date": "2025-02-28T14:52:36.400Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:52:36.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1ce51e4498ac1f8940d7a"
+  },
+  "name": "CocaCola",
+  "description": "The Coca-Cola Company es una corporación multinacional estadounidense de bebidas.",
+  "address": "Bulevar Aguilar Batres · 2413 7500",
+  "email": "cocacola@gmail.com",
+  "impactLevel": "HIGH_LEVEL",
+  "yearsOperating": 150,
+  "category": "Alimentos y bebidas",
+  "webPage": "https://cocacola.com/",
+  "createdAt": {
+    "$date": "2025-02-28T14:55:13.143Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:55:13.143Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1d03de4498ac1f8940d81"
+  },
+  "name": "PolloCampero",
+  "description": "Vendemos pollo siiiii",
+  "address": "3ra Avenida, 5ta Calle, Alamierda el calvario",
+  "email": "pollocampero@gmail.com",
+  "impactLevel": "LOW_LEVEL",
+  "yearsOperating": 3,
+  "category": "Alimentos y bebidas",
+  "webPage": "https://pollocampero.com/",
+  "createdAt": {
+    "$date": "2025-02-28T15:03:25.842Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:03:25.842Z"
+  }
+}]
