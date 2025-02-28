@@ -1,5 +1,5 @@
 import { body } from "express-validator";
-import { emailExists, usernameExists } from "../helpers/db-validators.js";
+import { emailExistsA, usernameExists } from "../helpers/db-validators.js";
 import { deleteFileOnError } from "./delete-file-on-error.js";
 import { handleErrors } from "./handle_errors.js";
 import { validarCampos } from "./validate-fields.js";
@@ -8,7 +8,7 @@ export const registerValidator = [
     body("username").notEmpty().withMessage("Username is required"),
     body("email").notEmpty().withMessage("The email IS required."),
     body("email").isEmail().withMessage("Not a valid Email."),
-    body("email").custom(emailExists),
+    body("email").custom(emailExistsA),
     body("username").custom(usernameExists),
     body("password").isStrongPassword({
         minLength: 8,
