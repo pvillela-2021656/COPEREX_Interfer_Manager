@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "32e85017-9d90-4d96-9d20-15d17e2818f2",
+		"name": "Interfer_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41958063"
+	},
+	"item": [
+		{
+			"name": "Admins",
+			"item": [
+				{
+					"name": "RegisterAdmins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Pollo Granjero",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Byron/OneDrive/Documentos/PracticaSupervisada/BIM1/Tarea3/COPEREX_Interfer_Manager/public/uploads/profile-pictures/pollocampero.png"
+								},
+								{
+									"key": "email",
+									"value": "pollogranjero@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Poll0Granj#ro",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginAdmins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ADMINDEFAULT@kinal.edu.gt\",\r\n    \"username\": \"ADMINDEFAULT\",\r\n    \"password\": \"Poll2Granj#ro\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "RegisterCompanies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTQxNzQsImV4cCI6MTc0MDcxNzc3NH0.H3bPkcFhiPFrjS0ZJYxNGJGJJJpZ4F62e0YZIL62vlo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Walmart\",\r\n    \"description\": \"Es una corporación multinacional de tiendas de origen estadounidense, que opera cadenas de grandes almacenes de descuento y clubes de almacenes.\",\r\n    \"address\": \"Centro Comercial, 3 Avenida 41 10, Cdad. de Guatemala\",\r\n    \"email\": \"walmartgt@gmail.com\",\r\n    \"impactLevel\": \"HIGH_LEVEL\",\r\n    \"yearsOperating\": \"62 \",\r\n    \"category\": \"Minorista comercial\",\r\n    \"webPage\": \"https://www.walmart.com.gt/?srsltid=AfmBOopQ2UETpvuX6b9aIQe3QiUt2oghiFLsLMzfdT8bWOd6YrKBDAlb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCompanies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTkxODEsImV4cCI6MTc0MDcyMjc4MX0.2FMHf9jObluTHzrrDhKydSTZjo3UikC7MFCnPnE-uHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Walmart2\",\r\n    \"description\": \"Es una corporación multinacional de tiendas de origen estadounidense, que opera cadenas de grandes almacenes de descuento y clubes de almacenes.2\",\r\n    \"address\": \"Centro Comercial, 3 Avenida 41 10, Cdad. de Guatemala2\",\r\n    \"email\": \"walmartgt2@gmail.com\",\r\n    \"impactLevel\": \"HIGH_LEVEL\",\r\n    \"yearsOperating\": \"32 \",\r\n    \"category\": \"Minorista comercial\",\r\n    \"webPage\": \"https://www.walmart.com.gt/?srsltid=AfmBOopQ2UETpvuX6b9aIQe3QiUt2oghiFLsLMzfdT8bWOd6YrKBDAlba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/updateCompany/67c131b9b859ae63416de5f8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"updateCompany",
+								"67c131b9b859ae63416de5f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCompaniesByYears",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTI3MDQsImV4cCI6MTc0MDcxNjMwNH0.1ZYlJCzuQpSISe0ru9-ZPfgNmAoLaRFDUm6bEitXdaU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/listCompaniesByYears",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"listCompaniesByYears"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCompaniesByCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTUwOTcsImV4cCI6MTc0MDcxODY5N30.Hw9WnrNTfnfKy4mZ3zpq3ipm-NGQXNWNz9uGvg6CASs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/listCompaniesByCategory/category",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"listCompaniesByCategory",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCompaniesByA-Z",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTYwNDUsImV4cCI6MTc0MDcxOTY0NX0.i7cAM95OVM2n4EndUnjXjh7CbGv0yRlkbZyn2bCd9sI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/listCompaniesByAZ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"listCompaniesByAZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCompanies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTYwNDUsImV4cCI6MTc0MDcxOTY0NX0.i7cAM95OVM2n4EndUnjXjh7CbGv0yRlkbZyn2bCd9sI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/listCompanies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"listCompanies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCompaniesByZ-A",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDZmNmZmYjNhMGUxN2ZmYTMwMGQiLCJpYXQiOjE3NDA3MTYwNDUsImV4cCI6MTc0MDcxOTY0NX0.i7cAM95OVM2n4EndUnjXjh7CbGv0yRlkbZyn2bCd9sI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/listCompaniesByZA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"listCompaniesByZA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExcelReport",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3008/interferManager/v1/companies/excel",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3008",
+							"path": [
+								"interferManager",
+								"v1",
+								"companies",
+								"excel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
