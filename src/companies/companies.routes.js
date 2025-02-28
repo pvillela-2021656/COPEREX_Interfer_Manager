@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { listCompaniesByAZValidator, listCompaniesByCategoryValidator, listCompaniesByYearsValidator, listCompaniesByZAValidator, listCompaniesValidator, registerCompanyValidator, updateCompanyValidator } from "../middlewares/companies-validator.js";
-import { listCompanies, listCompaniesByAZ, listCompaniesByCategory, listCompaniesByYears, listCompaniesByZA, registerCompany, updateCompany } from "./companies.controller.js";
+import { ExcelReport, listCompanies, listCompaniesByAZ, listCompaniesByCategory, listCompaniesByYears, listCompaniesByZA, registerCompany, updateCompany } from "./companies.controller.js";
 
 const router = Router();
 
@@ -17,4 +17,7 @@ router.get("/listCompaniesByAZ", listCompaniesByAZValidator, listCompaniesByAZ)
 router.get("/listCompaniesByZA", listCompaniesByZAValidator, listCompaniesByZA)
 
 router.put("/updateCompany/:id", updateCompanyValidator, updateCompany)
+
+router.get("/excel", ExcelReport)
+
 export default router;
