@@ -13,9 +13,9 @@
     "type": "module",
     "description": "Esta API esta hecha para manejar la cantidad de empresas que participen en la feria Interferer de COPEREX con un sistema similar a EXCEL.",
     "dependencies": {
-        "interfermanager": "file:",
         "argon2": "^0.41.1",
         "bcrypt": "^5.1.1",
+        "bcryptjs": "^3.0.2",
         "cors": "^2.8.5",
         "date-fns": "^4.1.0",
         "dotenv": "^16.4.7",
@@ -23,6 +23,7 @@
         "express-rate-limit": "^7.5.0",
         "express-validator": "^7.2.1",
         "helmet": "^8.0.0",
+        "interfermanager": "file:",
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.9.5",
         "morgan": "^1.10.0",
@@ -30,4 +31,4 @@
         "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^5.0.1"
     }
-    }
+}

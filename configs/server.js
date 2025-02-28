@@ -4,6 +4,7 @@ import cors from "cors"
 import express from "express"
 import helmet from "helmet"
 import morgan from "morgan"
+import authRoutes from "../src/auth/auth.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { dbConnection } from "./mongo.js"
 
@@ -17,7 +18,7 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-
+    app.use("/interferManager/v1/auth", authRoutes)
 }
 
 const conectarDB = async () => {
